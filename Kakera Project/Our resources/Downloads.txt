@@ -1,0 +1,11 @@
+This File contains download links to all of out resources that we used in this project
+Since the files are just too big for GitHub
+
+resources-1 (542 MB)
+https://www.mediafire.com/file/hiznzz5z3etmipv/all+messages.rar/file
+
+resources-2 (182 MB)
+https://www.mediafire.com/file/58262ofslb0xwbb/batch-2.rar/file
+
+flood-7 JSON (1.1GB)
+https://www.mediafire.com/file/3shtp8e1daq3xal/flood-7.rar/file
