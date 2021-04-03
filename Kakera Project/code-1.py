@@ -75,7 +75,7 @@ for i in dct:
 
 print(dct) # Prints out the raw data
 
-print('\nPurple:', dct['kakeraP'], '\nBlue:', dct['kakera '], '\nTeal:', dct['kakeraT'], 
+print('\nPurple:', dct['kakeraP'], '\nBlue:', dct['kakera'], '\nTeal:', dct['kakeraT'], 
 '\nGreen:', dct['kakeraG'], '\nYellow:', dct['kakeraY'], '\nOrange:', dct['kakeraO'], 
 '\nRed:', dct['kakeraR'], '\nRainbow:', dct['kakeraW'], '\nFor a total of',
  dctsm, 'kakera\nBroken down from', sm, 'Light kakera')
