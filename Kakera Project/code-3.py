@@ -28,8 +28,8 @@ kakera = {
 # ID:EmojiName
 "609264156347990016":"kakeraP",
 "609264226342797333":"kakeraP",
-"469791929106956298":"kakera", #This is the :kakera: emoji in Mudae World (Biggest Failiure point)
-"605364503781310464":"kakera",
+"469791929106956298":"kakera",
+"605364503781310464":"kakera", #This is the :kakera: emoji in Mudae World (Biggest Failiure point)
 "609264247645536276":"kakeraT",
 "609264180851376132":"kakeraT",
 "609264166381027329":"kakeraG",
