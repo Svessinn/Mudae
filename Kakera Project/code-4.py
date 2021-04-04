@@ -2,7 +2,7 @@
 
 #==============================================#
 #         Created By: Svess#8004               #
-#  Last Modification:  2021-03-04 07:22 UTC+0  #
+#  Last Modification:  2021-03-04 09:55 UTC+0  #
 #==============================================#
 
 # Imports
@@ -18,6 +18,7 @@ files = [
 
 # Dataset 1 
 # 2021-03-15 22:00 UTC - 2021-03-31 07:26 UTC
+# Server: Mudae World
 # After Light kakera was added
 # Uses Emoji Names
 
@@ -37,6 +38,7 @@ files = [
 
 # Dataset 2
 # 2020-12-31 22:00 UTC - 2021-02-28 22:00 UTC
+# Server: Mudae World
 # Before Light kakera was added
 # Uses Emoji Names
 
@@ -56,21 +58,45 @@ files = [
 
 # Dataset 3
 # 2021-03-15 22:00 UTC - 2021-04-02 09:00 UTC
+# Servers in File Path
 # After Light kakera was added
 # Uses Emoji IDs
 
-"resources-3/flood-1.txt",
-"resources-3/flood-2.txt",
-"resources-3/flood-3.txt",
-"resources-3/flood-4.txt",
-"resources-3/flood-5.txt",
-"resources-3/flood-6.txt",
-"resources-3/flood-7.txt",
-"resources-3/flood-8.txt",
-"resources-3/flood-9.txt",
-"resources-3/flood-husbando.txt",
-"resources-3/flood-waifu.txt",
-"resources-3/marry-roulette.txt"
+"resources-3/Mudae-World/flood-1.txt",
+"resources-3/Mudae-World/flood-2.txt",
+"resources-3/Mudae-World/flood-3.txt",
+"resources-3/Mudae-World/flood-4.txt",
+"resources-3/Mudae-World/flood-5.txt",
+"resources-3/Mudae-World/flood-6.txt",
+"resources-3/Mudae-World/flood-7.txt",
+"resources-3/Mudae-World/flood-8.txt",
+"resources-3/Mudae-World/flood-9.txt",
+"resources-3/Mudae-World/flood-husbando.txt",
+"resources-3/Mudae-World/flood-waifu.txt",
+"resources-3/Mudae-World/marry-roulette.txt",
+"resources-3/Rollsdae-World/rolls-1.txt",
+"resources-3/Rollsdae-World/rolls-2.txt",
+"resources-3/Rollsdae-World/rolls-3.txt",
+"resources-3/Rollsdae-World/rolls-4.txt",
+"resources-3/Rollsdae-World/rolls-5.txt",
+"resources-3/Rollsdae-World/rolls-6.txt",
+"resources-3/Rollsdae-World/rolls-7.txt",
+"resources-3/Rollsdae-World/rolls-8.txt",
+"resources-3/Rollsdae-World/rolls-9.txt",
+"resources-3/Rollsdae-World/rolls-10.txt",
+"resources-3/Rollsdae-World/rolls-11.txt",
+"resources-3/Rollsdae-World/rolls-12.txt",
+"resources-3/Rollsdae-World/rolls-13.txt",
+"resources-3/Rollsdae-World/rolls-14.txt",
+"resources-3/Rollsdae-World/rolls-15.txt",
+"resources-3/Rollsdae-World/rolls-16.txt",
+"resources-3/Rollsdae-World/rolls-17.txt",
+"resources-3/Rollsdae-World/rolls-18.txt",
+"resources-3/Rollsdae-World/rolls-oui-rolls.txt",
+"resources-3/Rollsdae-World/rolls-sim-rolls.txt",
+"resources-3/Rollsdae-World/rolls-yes-rolls.txt",
+"resources-3/Shadbase/mudae-rolls-spam.txt",
+"resources-3/Dyrus/waifu-gacha.txt"
 ]
 
 # A dictionary of all the kakera emojis
