@@ -4,5 +4,8 @@ Since the files are just too big for GitHub
 Resources 1-3 (Gathered from the Mudae World server)
 https://www.mediafire.com/file/u3mwnpfodig7s1k/Resources.rar/file
 
+Resourses 3 (Gathered from: Rollsdae World, Shadbase, and Dyrus)
+https://www.mediafire.com/file/9vn5d7jzsxstvzg/resources-3-other.rar/file
+
 flood-7 JSON (1.1GB)
 https://www.mediafire.com/file/3shtp8e1daq3xal/flood-7.rar/file
