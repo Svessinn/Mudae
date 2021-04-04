@@ -2,7 +2,7 @@
 
 #==============================================#
 #         Created By: Svess#8004               #
-#  Last Modification:  2021-03-03 20:10 UTC+0  #
+#  Last Modification:  2021-03-04 07:22 UTC+0  #
 #==============================================#
 
 # Imports
@@ -19,6 +19,7 @@ files = [
 # Dataset 1 
 # 2021-03-15 22:00 UTC - 2021-03-31 07:26 UTC
 # After Light kakera was added
+# Uses Emoji Names
 
 #"resources-1/flood-1.txt",
 #"resources-1/flood-2.txt",
@@ -33,9 +34,11 @@ files = [
 #"resources-1/flood-waifu.txt",
 #"resources-1/marry-roulette.txt"
 
+
 # Dataset 2
 # 2020-12-31 22:00 UTC - 2021-02-28 22:00 UTC
 # Before Light kakera was added
+# Uses Emoji Names
 
 #"resources-2/flood-1.txt",
 #"resources-2/flood-2.txt",
@@ -50,9 +53,11 @@ files = [
 #"resources-2/flood-waifu.txt",
 #"resources-2/marry-roulette.txt"
 
+
 # Dataset 3
 # 2021-03-15 22:00 UTC - 2021-04-02 09:00 UTC
 # After Light kakera was added
+# Uses Emoji IDs
 
 "resources-3/flood-1.txt",
 "resources-3/flood-2.txt",
@@ -69,9 +74,9 @@ files = [
 ]
 
 # A dictionary of all the kakera emojis
-# that the Mudae bots use for reactions
+# that the Mudae bots uses/used for reactions
 # this lowers the reat of error a lot 
-# since noboy has access to the emoji servers
+# since "nobody" has access to the emoji servers
 kakeraDict = {
 # ID:EmojiName
 "609264156347990016":"kakeraP",
@@ -94,10 +99,15 @@ kakeraDict = {
 }
 
 # A dictionary of all the kakera emojis
-# that the Mudae bots use for reactions
-# added this since it lowers False Posives
+# that the Mudae bots uses/used for reactions
+#
+# Added this since it lowers False Posives
 # that appear when people react to messages
 # using the Mudae World :kakera: emoji
+#
+# Since dictionaries don't hold their order
+# and we need the Mudae World :kakera: amoji to
+# be the last item checked to lower False positives
 kakeraList = [
 "609264156347990016",
 "609264226342797333",
@@ -127,18 +137,21 @@ for File in files:
   lastLine2 = '' #
   lastLine3 = '' # We and to be able to see two lines back for a check
   
-  # Reads through each line
+  # Reads through each line of the File and checks it for rections
   for line in searchfile:
-    k = True
     # Checks for reactions on messages with 'Belongs to '
+    # This prevents user messages with kakera reactions from easily slipping through
     if '{Reactions}' in lastLine and 'Belongs to ' in lastLine3:
       # Checks if reaction is a kakera
       for i in kakeraList:
         if i in line:
-          if k:
-            dct[i] += 1
-            k = False # k is set to false if a kakera reaction is detected
-
+          dct[i] += 1
+          # Breaking here ensures that if there is a reaction 
+          # using the Mudae World :kakera: emoji it wont get past
+          # since it's the last element in out kakeraList
+          # it also prevents
+          break 
+    
     lastLine3 = lastLine2 # Updates the lastLine3 variable
     lastLine2 = lastLine # Updates the lastLine2 variable
     lastLine = line # Updates the lastLine variable
@@ -166,10 +179,25 @@ for i in kakeraDict:
   reactionValues[kakeraDict[i]] += dct[i]
   cnt += dct[i]
 
-print(dct) # Prints out the raw data
+# Prints out the raw data
+#print(dct)
 
 # Prints the data in an organised format
 print('\nPurple:', reactionValues['kakeraP'], '\nBlue:', reactionValues['kakera'], '\nTeal:', reactionValues['kakeraT'], 
 '\nGreen:', reactionValues['kakeraG'], '\nYellow:', reactionValues['kakeraY'], '\nOrange:', reactionValues['kakeraO'], 
-'\nRed:', reactionValues['kakeraR'], '\nRainbow:', reactionValues['kakeraW'], '\nLight:', reactionValues['kakeraL'])
-print('A total of', cnt, 'kakera ractions')
+'\nRed:', reactionValues['kakeraR'], '\nRainbow:', reactionValues['kakeraW'], '\nLight:', reactionValues['kakeraL'], '\n\nA total of', cnt, 'kakera ractions')
+
+print('\nSpawn chnances of kakera:\n\nPurple Spawn rate: ', format(round(100*reactionValues['kakeraP']/cnt, 6), '.4f'), '%', 
+#'\nBlue Spawn rate: ', format(round(100*reactionValues['kakera']/cnt, 6), '.4f'), '%', 
+#'\nTeal Spawn rate: ', format(round(100*reactionValues['kakeraT']/cnt, 6), '.4f'), '%', 
+#'\nGreen Spawn rate: ', format(round(100*reactionValues['kakeraG']/cnt, 6), '.4f'), '%', 
+#'\nYellow Spawn rate: ', format(round(100*reactionValues['kakeraY']/cnt, 6), '.4f'), '%', 
+#'\nOrange Spawn rate: ', format(round(100*reactionValues['kakeraO']/cnt, 6), '.4f'), '%', 
+'\nRed Spawn rate: ', format(round(100*reactionValues['kakeraR']/cnt, 6), '.4f'), '%', 
+'\nRainbow Spawn rate: ', format(round(100*reactionValues['kakeraW']/cnt, 6), '.4f'), '%', 
+'\nLight Spawn rate: ', format(round(100*reactionValues['kakeraL']/cnt, 6), '.4f'), '%', sep='')
+
+
+print('\nCombined kakera due to Sapphire 4 and 3 keys:\n\nBlue & Yellow Spawn rate: ', format(round((100*reactionValues['kakera']+100*reactionValues['kakeraY'])/cnt, 6), '.4f'), '%', 
+'\nTeal, Green & Orange Spawn rate: ', format(round((100*reactionValues['kakeraT']+100*reactionValues['kakeraG']+100*reactionValues['kakeraO'])/cnt, 6), '.4f'), '%', sep='')
+
